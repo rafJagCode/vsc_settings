@@ -1,1 +1,33 @@
-../../AppData/Roaming/Code/User/snippets/nabthat.code-snippets
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Custompage link button": {
+		"scope": "html",
+		"prefix": "custompage__link-btn",
+		"body": [
+              "<a class=\"routerLink btn btn--primary btn--wide\" href=\"\" title=\"\"><span class=\"btn__wrapper\" tabindex=\"-1\"><span></span></span></a>"
+		],
+		"description": "Standard routerLink button"
+	},
+	"Custompage image-text container": {
+		"scope": "html",
+		"prefix": "custompage__image-text-container",
+		"body": [
+  		"<article class=\"container\"><div class=\"row gap-1 md:gap-0\"><div class=\"col-md-6\"><img class=\"h-100 fit-cover\" src=\"\" alt=\"\" /> </div> <div class=\"col-md-6 row content-center\"> <div class=\"col-12\"> <h2 class=\"text-center\"></h2> </div> <div class=\"col-12\"> <p class=\"text-left\"></p> </div> <div class=\"col-12 text-center py-1\"> </div> </div> </div> </article>" 
+		],
+		"description": "Standard article with two columns for text and image on medium+ resolutions"
+	},
+	"Custompage slider section": {
+		"scope": "html",
+		"prefix": "custompage__slider-section",
+		"body": [
+      "<h1 class=\"mb-1.5 text-center\"> </h1> <!-- SECTION HERO BANNER --> <app-template-component data-component-name=\"app-template-slider\" data-component-data='{\"contentSliderKey\": \"\"}' ></app-template-component> <!-- END SECTION HERO BANNER -->"
+		],
+		"description": "Standard slider section"
+	}
+}

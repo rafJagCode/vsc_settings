@@ -1,1 +1,82 @@
-../../AppData/Roaming/Code/User/settings.json
+{
+  // EDITOR SETTINGS
+  "editor.minimap.enabled": false,
+  "editor.codeLens": false,
+  "editor.renderLineHighlight": "none",
+  "editor.quickSuggestionsDelay": 0,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontWeight": "500",
+  "editor.fontSize": 12,
+  "editor.lineHeight": 17,
+  "editor.letterSpacing": 0.8,
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "none",
+  "editor.tabSize": 2,
+  // WORKBENCH SETTINGS
+  "workbench.tree.indent": 20,
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.iconTheme": "material-icon-theme",
+  // TERMINAL
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  // PRETTIER
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  // VIM
+  "vim.useSystemClipboard": true,
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-h>": false,
+    "<C-p>": false,
+    "<C-c>": false,
+    "<C-w>": false,
+    "<C-b>": false
+  },
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.fold"]
+    },
+    {
+      "before": ["<leader>", "f", "a"],
+      "commands": ["editor.foldAll"]
+    },
+    {
+      "before": ["<leader>", "u"],
+      "commands": ["editor.unfold"]
+    },
+    {
+      "before": ["<leader>", "u", "a"],
+      "commands": ["editor.unfoldAll"]
+    },
+    {
+      "before": ["<leader>", "u", "r"],
+      "commands": ["editor.unfoldRecursively"]
+    },
+    {
+      // Pressing ctrl+n clears search highlighting
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["d"],
+      "after": ["\"", "d", "d"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "c", "c"]
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "x", "x"]
+    }
+  ]
+}

@@ -1,1 +1,73 @@
-../../AppData/Roaming/Code/User/keybindings.json
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  }
+  // {
+  //   "key": "alt+k",
+  //   "command": "editor.action.moveLinesUpAction",
+  //   "when": "editorTextFocus && !editorReadonly"
+  // },
+  // {
+  //   "key": "alt+up",
+  //   "command": "-editor.action.moveLinesUpAction",
+  //   "when": "editorTextFocus && !editorReadonly"
+  // },
+  // {
+  //   "key": "ctrl+j",
+  //   "command": "selectNextCodeAction",
+  //   "when": "codeActionMenuVisible"
+  // },
+  // {
+  //   "key": "ctrl+down",
+  //   "command": "-selectNextCodeAction",
+  //   "when": "codeActionMenuVisible"
+  // },
+  // {
+  //   "key": "ctrl+k",
+  //   "command": "selectPrevCodeAction",
+  //   "when": "codeActionMenuVisible"
+  // },
+  // {
+  //   "key": "ctrl+up",
+  //   "command": "-selectPrevCodeAction",
+  //   "when": "codeActionMenuVisible"
+  // }
+]
