@@ -39,7 +39,7 @@
     "key": "alt+down",
     "command": "-editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
-  }
+  },
   {
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
@@ -69,5 +69,15 @@
     "key": "ctrl+up",
     "command": "-selectPrevCodeAction",
     "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "escape",
+    "command": "extension.vim_escape",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !parameterHintsVisible && !suggestWidgetVisible"
+  },
+  {
+    "key": "escape",
+    "command": "-extension.vim_escape",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
   }
 ]

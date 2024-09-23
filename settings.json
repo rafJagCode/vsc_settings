@@ -17,6 +17,8 @@
   "workbench.sideBar.location": "right",
   "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.location": "bottom",
+  "workbench.startupEditor": "none",
   // TERMINAL
   "terminal.integrated.defaultProfile.windows": "Git Bash",
 
@@ -25,6 +27,7 @@
   "editor.formatOnSave": true,
   // VIM
   "vim.useSystemClipboard": true,
+  "vim.startInInsertMode": true,
   "vim.easymotion": true,
   "vim.foldfix": true,
   "extensions.experimental.affinity": {
@@ -39,7 +42,8 @@
     "<C-w>": false,
     "<C-b>": false,
     "<C-j>": false,
-    "<C-k>": false
+    "<C-k>": false,
+    "<C-d>": false
   },
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -80,5 +84,19 @@
       "before": ["x"],
       "after": ["\"", "x", "x"]
     }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["."], "commands": ["editor.action.smartSelect.expand"] },
+    { "before": [","], "commands": ["editor.action.smartSelect.shrink"] }
   ]
 }
