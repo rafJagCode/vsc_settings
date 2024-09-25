@@ -18,7 +18,7 @@
 		"scope": "html",
 		"prefix": "custompage__image-text-container",
 		"body": [
-  		"<article class=\"container\"><div class=\"row gap-1 md:gap-0\"><div class=\"col-md-6\"><img class=\"h-100 fit-cover\" src=\"\" alt=\"\" /> </div> <div class=\"col-md-6 row content-center\"> <div class=\"col-12\"> <h2 class=\"text-center\"></h2> </div> <div class=\"col-12\"> <p class=\"text-left\"></p> </div> <div class=\"col-12 text-center py-1\"> </div> </div> </div> </article>" 
+  		"<article class=\"container\"><div class=\"row gap-1 md:gap-0\"><div class=\"col-md-6 flex\"><img class=\"w-100 object-cover\" src=\"\" alt=\"\" /> </div> <div class=\"col-md-6 row content-center\"> <div class=\"col-12\"> <h2 class=\"text-center\"></h2> </div> <div class=\"col-12\"> <p class=\"text-left\"></p> </div> <div class=\"col-12 text-center py-1\"> </div> </div> </div> </article>" 
 		],
 		"description": "Standard article with two columns for text and image on medium+ resolutions"
 	},
@@ -29,5 +29,30 @@
       "<h1 class=\"mb-1.5 text-center\"> </h1> <!-- SECTION HERO BANNER --> <app-template-component data-component-name=\"app-template-slider\" data-component-data='{\"contentSliderKey\": \"\"}' ></app-template-component> <!-- END SECTION HERO BANNER -->"
 		],
 		"description": "Standard slider section"
-	}
+	},
+	"Custompage map section": {
+		"scope": "html",
+		"prefix": "custompage__map-section",
+		"body": [
+      "<!-- SECTION MAP --> <section class=\"py-1.5\"> <div class=\"container\"> <app-template-component data-component-data='{\"contentTitle\":\"Get Directions\"}' data-component-name=\"app-template-map\" ></app-template-component> </div> </section> <!--END SECTION MAP -->"
+		],
+		"description": "Standard map section"
+	},
+	"Custompage contact section": {
+		"scope": "html",
+		"prefix": "custompage__contact-section",
+		"body": [
+      "<!-- SECTION CONTACT US --> <section class=\"pt-1.5 pb-2.5\"> <div class=\"container\"> <app-template-component data-component-name=\"app-template-contact-form\" data-component-data='{\"contentTitle\": \"Contact Us Now\", \"contentSubtitle\": \"\", \"searchKey\": \"\"}' ></app-template-component> </div> </section> <!--END SECTION CONTACT US -->"
+		],
+		"description": "Standard contact section"
+	},
+	"Custompage two-button-row": {
+		"scope": "html",
+		"prefix": "custompage__two-btn-row",
+		"body": [
+      "<div class=\"row flex-column gap-1 justify-center text-center py-1 sm:flex-row sm:gap-0\" > <div class=\"col-12 col-sm-auto\"> <a class=\"routerLink btn btn--primary btn--wide\" href=\"\" title=\"\" ><span class=\"btn__wrapper\" tabindex=\"-1\" ><span></span></span ></a > </div> <div class=\"col-12 col-sm-auto\"> <a class=\"routerLink btn btn--primary btn--wide\" href=\"\" title=\"\" ><span class=\"btn__wrapper\" tabindex=\"-1\" ><span></span></span ></a > </div> </div>"
+		],
+		"description": "Standard two button row"
+	},
+
 }

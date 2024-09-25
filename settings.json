@@ -12,6 +12,11 @@
   "editor.fontLigatures": true,
   "editor.renderWhitespace": "none",
   "editor.tabSize": 2,
+  "editor.stickyScroll.enabled": false,
+  "editor.stickyScroll.scrollWithEditor": false,
+  "editor.guides.indentation": false,
+  "editor.selectionHighlight": false,
+  "editor.occurrencesHighlight": "off",
   // WORKBENCH SETTINGS
   "workbench.tree.indent": 20,
   "workbench.sideBar.location": "right",
@@ -19,6 +24,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.location": "bottom",
   "workbench.startupEditor": "none",
+  "workbench.tree.enableStickyScroll": false,
   // TERMINAL
   "terminal.integrated.defaultProfile.windows": "Git Bash",
 
@@ -28,8 +34,8 @@
   // VIM
   "vim.useSystemClipboard": true,
   "vim.startInInsertMode": true,
-  "vim.replaceWithRegister": true, // NEW
-  "vim.surround": true, // NEW
+  "vim.replaceWithRegister": true,
+  "vim.surround": true,
   "vim.easymotion": true,
   "vim.foldfix": true,
   "extensions.experimental.affinity": {
@@ -87,11 +93,11 @@
       "after": ["\"", "x", "x"]
     },
     {
-      "before": ["<leader>", "k"], // NEW
+      "before": ["<leader>", "k"],
       "after": ["2", "5", "k"]
     },
     {
-      "before": ["<leader>", "j"], // NEW
+      "before": ["<leader>", "j"],
       "after": ["2", "5", "j"]
     }
   ],
@@ -107,14 +113,15 @@
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["."], "commands": ["editor.action.smartSelect.expand"] },
-    { "before": [","], "commands": ["editor.action.smartSelect.shrink"] }
+    { "before": [","], "commands": ["editor.action.smartSelect.shrink"] },
+    {
+      "before": ["d"],
+      "after": ["\"", "d", "d"]
+    }
   ],
-
-  // NEW
-  "editor.selectionHighlight": false,
-  "editor.occurrencesHighlight": "off",
-  "html.autoClosingTags": false,
-  "editor.guides.indentation": false
+  // OTHER
+  "window.restoreWindows": "none",
+  "html.autoClosingTags": false
 
   // surrounding with tags in visual mode with S + t
   // easy motions <leader><leader> w/j/k
