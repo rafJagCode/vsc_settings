@@ -28,6 +28,8 @@
   // VIM
   "vim.useSystemClipboard": true,
   "vim.startInInsertMode": true,
+  "vim.replaceWithRegister": true, // NEW
+  "vim.surround": true, // NEW
   "vim.easymotion": true,
   "vim.foldfix": true,
   "extensions.experimental.affinity": {
@@ -83,6 +85,14 @@
     {
       "before": ["x"],
       "after": ["\"", "x", "x"]
+    },
+    {
+      "before": ["<leader>", "k"], // NEW
+      "after": ["2", "5", "k"]
+    },
+    {
+      "before": ["<leader>", "j"], // NEW
+      "after": ["2", "5", "j"]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -98,5 +108,23 @@
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["."], "commands": ["editor.action.smartSelect.expand"] },
     { "before": [","], "commands": ["editor.action.smartSelect.shrink"] }
-  ]
+  ],
+
+  // NEW
+  "editor.selectionHighlight": false,
+  "editor.occurrencesHighlight": "off",
+  "html.autoClosingTags": false,
+  "editor.guides.indentation": false
+
+  // surrounding with tags in visual mode with S + t
+  // easy motions <leader><leader> w/j/k
+  // replacing with register in visual mode "reg + gr
+  // selecting by tags in visual mode a + t
+  // smart expand/shrink in visual mode  ,/.
+  // <leader> + j/k jump 25 lines down/up
+  // <leader> + f fold
+  // <leader> + f + a fold all
+  // <leader> + u unfold
+  // <leader> + u + a unfold all
+  // <leader> + u + r unfold recursive
 }
