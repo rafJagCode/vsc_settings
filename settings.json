@@ -17,6 +17,7 @@
   "editor.guides.indentation": false,
   "editor.selectionHighlight": false,
   "editor.occurrencesHighlight": "off",
+  "editor.wordWrap": "on",
   // WORKBENCH SETTINGS
   "workbench.tree.indent": 20,
   "workbench.sideBar.location": "right",
@@ -25,6 +26,8 @@
   "workbench.activityBar.location": "bottom",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": false,
+  // PRETTIER
+  "prettier.printWidth": 220,
   // TERMINAL
   "terminal.integrated.defaultProfile.windows": "Git Bash",
 
@@ -37,6 +40,7 @@
   "vim.replaceWithRegister": true,
   "vim.surround": true,
   "vim.easymotion": true,
+  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
   "vim.foldfix": true,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
@@ -51,7 +55,8 @@
     "<C-b>": false,
     "<C-j>": false,
     "<C-k>": false,
-    "<C-d>": false
+    "<C-d>": false,
+    "<C-v>": false
   },
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -124,7 +129,7 @@
   "html.autoClosingTags": false
 
   // surrounding with tags in visual mode with S + t
-  // easy motions <leader><leader> w/j/k
+  // easy motions <leader><leader> w/b/j/k
   // replacing with register in visual mode "reg + gr
   // selecting by tags in visual mode a + t
   // smart expand/shrink in visual mode  ,/.
