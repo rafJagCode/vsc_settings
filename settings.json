@@ -129,7 +129,8 @@
   "html.autoClosingTags": false
 
   // surrounding with tags in visual mode with S + t
-  // easy motions <leader><leader> w/b/j/k
+  // change, remove surrounding tag cst, dst
+  // easy motions <leader><leader> w/b j/k /serch_term
   // replacing with register in visual mode "reg + gr
   // selecting by tags in visual mode a + t
   // smart expand/shrink in visual mode  ,/.
@@ -139,4 +140,7 @@
   // <leader> + u unfold
   // <leader> + u + a unfold all
   // <leader> + u + r unfold recursive
+  // select last selection gv
+  //:20,50y/d copy/delete lines in range
+  // ma/A, `a/A, :marks -> make mark a/A, got to mark a/A, list marks
 }
