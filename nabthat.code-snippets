@@ -26,7 +26,7 @@
 		"scope": "html",
 		"prefix": "custompage__slider-section",
 		"body": [
-      "<h1 class=\"mb-1.5 text-center\"> </h1> <!-- SECTION HERO BANNER --> <app-template-component data-component-name=\"app-template-slider\" data-component-data='{\"contentSliderKey\": \"\"}' ></app-template-component> <!-- END SECTION HERO BANNER -->"
+			"<section> <h1 class=\"py-1.5 mb-0 text-center title--shadow\">About Us</h1> <!-- SECTION HERO BANNER --> <app-template-component data-component-name=\"app-template-slider\" data-component-data='{\"contentSliderKey\": \"about-us\"}'></app-template-component> <!-- END SECTION HERO BANNER --> </section>"
 		],
 		"description": "Standard slider section"
 	},
@@ -53,6 +53,14 @@
       "<div class=\"row flex-column gap-1 justify-center text-center py-1 sm:flex-row sm:gap-0\" > <div class=\"col-12 col-sm-auto\"> <a class=\"routerLink btn btn--primary btn--wide\" href=\"\" title=\"\" ><span class=\"btn__wrapper\" tabindex=\"-1\" ><span></span></span ></a > </div> <div class=\"col-12 col-sm-auto\"> <a class=\"routerLink btn btn--primary btn--wide\" href=\"\" title=\"\" ><span class=\"btn__wrapper\" tabindex=\"-1\" ><span></span></span ></a > </div> </div>"
 		],
 		"description": "Standard two button row"
+	},
+	"Custompage .title--shadow": {
+		"scope": "css",
+		"prefix": "custompage__title--shadow",
+		"body": [
+      "[custompage] .title--shadow { box-shadow: inset 0 -0.05rem 0.5rem rgb(0 0 0 / 5%); }"
+		],
+		"description": "Standard title--shadow class"
 	},
 
 }
