@@ -1,7 +1,7 @@
 {
   // EDITOR SETTINGS
   "editor.minimap.enabled": false,
-  "editor.codeLens": false,
+  "editor.codeLens": true,
   "editor.renderLineHighlight": "none",
   "editor.quickSuggestionsDelay": 0,
   "editor.fontFamily": "Fira Code",
@@ -18,22 +18,32 @@
   "editor.selectionHighlight": false,
   "editor.occurrencesHighlight": "off",
   "editor.wordWrap": "on",
+  "editor.cursorSurroundingLines": 20,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.quickSuggestions": { "other": false, "comments": false, "strings": false },
+  "editor.wordBasedSuggestions": "off",
+
   // WORKBENCH SETTINGS
   "workbench.tree.indent": 20,
   "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.activityBar.location": "bottom",
   "workbench.startupEditor": "none",
   "workbench.tree.enableStickyScroll": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.showTabs": "none",
+
   // PRETTIER
   "prettier.printWidth": 220,
+
   // TERMINAL
   "terminal.integrated.defaultProfile.windows": "Git Bash",
 
   // PRETTIER
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+
   // VIM
   "vim.useSystemClipboard": true,
   "vim.startInInsertMode": true,
@@ -42,49 +52,30 @@
   "vim.easymotion": true,
   "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
   "vim.foldfix": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#ffb70360",
+  "vim.highlightedyank.duration": 100,
+  "vim.vimrc.enable": true,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
   "vim.handleKeys": {
     "<C-a>": false,
+    "<C-c>": false,
+    "<C-x>": false,
+    "<C-v>": false,
     "<C-f>": false,
     "<C-h>": false,
-    "<C-p>": false,
-    "<C-c>": false,
-    "<C-w>": false,
-    "<C-b>": false,
-    "<C-j>": false,
-    "<C-k>": false,
-    "<C-d>": false,
-    "<C-v>": false
+    "<C-p>": false
   },
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
+    // Blockwise Visual Selection
     {
-      "before": ["<leader>", "f"],
-      "commands": ["editor.fold"]
+      "before": ["<leader>", "v"],
+      "commands": ["extension.vim_ctrl+v"]
     },
-    {
-      "before": ["<leader>", "f", "a"],
-      "commands": ["editor.foldAll"]
-    },
-    {
-      "before": ["<leader>", "u"],
-      "commands": ["editor.unfold"]
-    },
-    {
-      "before": ["<leader>", "u", "a"],
-      "commands": ["editor.unfoldAll"]
-    },
-    {
-      "before": ["<leader>", "u", "r"],
-      "commands": ["editor.unfoldRecursively"]
-    },
-    {
-      // Pressing ctrl+n clears search highlighting
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
-    },
+    // Assing Removed Text To Coresponding Registers
     {
       "before": ["d"],
       "after": ["\"", "d", "d"]
@@ -97,16 +88,18 @@
       "before": ["x"],
       "after": ["\"", "x", "x"]
     },
+    // Faster Scroll
     {
-      "before": ["<leader>", "k"],
-      "after": ["2", "5", "k"]
+      "before": ["<C-j>"],
+      "after": ["2", "j"]
     },
     {
-      "before": ["<leader>", "j"],
-      "after": ["2", "5", "j"]
+      "before": ["<C-k>"],
+      "after": ["2", "k"]
     }
   ],
   "vim.visualModeKeyBindings": [
+    // Indentation
     {
       "before": [">"],
       "commands": ["editor.action.indentLines"]
@@ -117,16 +110,26 @@
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
+    // Smart Shrink/Expand
     { "before": ["."], "commands": ["editor.action.smartSelect.expand"] },
     { "before": [","], "commands": ["editor.action.smartSelect.shrink"] },
+    // Assing Removed Text To Corresponding Register
     {
       "before": ["d"],
       "after": ["\"", "d", "d"]
     }
   ],
-  // OTHER
+
+  // WINDOW
   "window.restoreWindows": "none",
-  "html.autoClosingTags": false
+  "window.commandCenter": false,
+
+  // OTHER
+  "html.autoClosingTags": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "github.copilot.editor.enableAutoCompletions": false,
+  "window.menuBarVisibility": "compact"
 
   // surrounding with tags in visual mode with S + t
   // change, remove surrounding tag cst, dst
@@ -134,13 +137,8 @@
   // replacing with register in visual mode "reg + gr
   // selecting by tags in visual mode a + t
   // smart expand/shrink in visual mode  ,/.
-  // <leader> + j/k jump 25 lines down/up
-  // <leader> + f fold
-  // <leader> + f + a fold all
-  // <leader> + u unfold
-  // <leader> + u + a unfold all
-  // <leader> + u + r unfold recursive
   // select last selection gv
   //:20,50y/d copy/delete lines in range
   // ma/A, `a/A, :marks -> make mark a/A, got to mark a/A, list marks
+  // move half page up/down ctrl u/d
 }
