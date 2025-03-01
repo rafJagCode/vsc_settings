@@ -46,7 +46,6 @@
 
   // VIM
   "vim.useSystemClipboard": true,
-  "vim.startInInsertMode": true,
   "vim.replaceWithRegister": true,
   "vim.surround": true,
   "vim.easymotion": true,
@@ -69,13 +68,27 @@
     "<C-p>": false
   },
   "vim.leader": "<space>",
+
   "vim.normalModeKeyBindingsNonRecursive": [
-    // Blockwise Visual Selection
+    // BLOCKWISE VISUAL SELECTION
     {
       "before": ["<leader>", "v"],
       "commands": ["extension.vim_ctrl+v"]
     },
-    // Assing Removed Text To Coresponding Registers
+
+    // RENAME VARIABLE
+    {
+      "before": ["<leader>", "r"],
+      "commands": ["editor.action.rename"]
+    },
+
+    // OPEN SEARCH EDITOR
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["search.action.openEditor"]
+    },
+
+    // ASSING REMOVED TEXT TO CORESPONDING REGISTERS
     {
       "before": ["d"],
       "after": ["\"", "d", "d"]
@@ -88,18 +101,20 @@
       "before": ["x"],
       "after": ["\"", "x", "x"]
     },
-    // Faster Scroll
+
+    // MANAGING EDITORS
     {
-      "before": ["<C-j>"],
-      "after": ["2", "j"]
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.splitEditor"]
     },
     {
-      "before": ["<C-k>"],
-      "after": ["2", "k"]
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showAllEditors"]
     }
   ],
+
   "vim.visualModeKeyBindings": [
-    // Indentation
+    // INDENTATION
     {
       "before": [">"],
       "commands": ["editor.action.indentLines"]
@@ -109,11 +124,13 @@
       "commands": ["editor.action.outdentLines"]
     }
   ],
+
   "vim.visualModeKeyBindingsNonRecursive": [
-    // Smart Shrink/Expand
+    // SMART SHRINK/EXPAND
     { "before": ["."], "commands": ["editor.action.smartSelect.expand"] },
     { "before": [","], "commands": ["editor.action.smartSelect.shrink"] },
-    // Assing Removed Text To Corresponding Register
+
+    // ASSING REMOVED TEXT TO CORRESPONDING REGISTER
     {
       "before": ["d"],
       "after": ["\"", "d", "d"]
